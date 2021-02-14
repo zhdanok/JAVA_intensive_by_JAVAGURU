@@ -1,5 +1,6 @@
 package io.github.zhdanok.servise;
 
+
 import org.junit.Test;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
@@ -42,34 +43,24 @@ public class MathOperationDemoTest {
 
     @Test
     public void division() {
-        double x = 29;
+        double x = 24;
         double y = 3;
-        double expected = 9.66;
-        if (y == 0) {
-            logger.warn("Division by zero {} / {} is impossible", x, y);
-        }
-        else {
-            double actuale = MathOperationDemo.division(x, y);
-            assertEquals(expected, actuale, 0.01);
-            logger.info("Division: x / y = {} / {} = {}", x, y, actuale);
-        }
+        double expected = 8;
+        double actuale = MathOperationDemo.division(x, y);
+        assertEquals(expected, actuale, 0.01);
+        logger.info("Division: x / y = {} / {} = {}", x, y, actuale);
+
     }
 
     @Test
     public void divisionByZero() {
-        double x = 29;
+        double x = 27.3;
         double y = 0;
-        double expected = 0;
-        if (y == 0) {
-            logger.warn("Division by zero {} / {} is impossible", x, y);
-        }
-        else {
-            double actuale = MathOperationDemo.division(x, y);
-            assertEquals(expected, actuale, 0.01);
-            logger.info("Division: x / y = {} / {} = {}", x, y, actuale);
-        }
-    }
+        double actuale = MathOperationDemo.division(x, y);
+        assertEquals(0, actuale, 0.01);
+        logger.warn("Division by zero {} / {} is impossible", x, y);
 
+    }
 
 
     @Test
@@ -81,7 +72,6 @@ public class MathOperationDemoTest {
         assertEquals(expected, actuale, 0.01);
         logger.info("Reminder: x % y = {} % {} = {}", x, y, actuale);
     }
-
 
 
 }

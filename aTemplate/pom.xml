@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.zhdanok</groupId>
-    <artifactId>task1</artifactId>
+    <artifactId>MathOperationDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <sonar.projectKey>javaGuruBY_java-free-stream-5</sonar.projectKey>
-        <sonar.organization>javaguruby</sonar.organization>
+        <sonar.projectKey>zhdanok_JAVA_intensive_by_JAVAGURU</sonar.projectKey>
+        <sonar.organization>zhdanok</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.login>d4a43c92cc5b4686b432aa2bcfea10d230cc5b73</sonar.login>
+        <sonar.login>f50e14c4c85e3392b9ca5f7d52fab39460a33172</sonar.login>
     </properties>
 
     <dependencies>
@@ -49,6 +49,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
                 <configuration>
                     <source>11</source>
                     <target>11</target>
