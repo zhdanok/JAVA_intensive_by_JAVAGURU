@@ -13,7 +13,7 @@ class WrappersTest {
     static Logger logger = LoggerFactory.getLogger(WrappersTest.class);
 
     @Test
-    public void createWrapperWithConstructorAndValueOf() {
+    void createWrapperWithConstructorAndValueOf() {
         Integer year1 = new Integer(2021);
         Double dollarRate1 = new Double(2.58);
         logger.info("The dollar rate is {} at the beginning of {}", dollarRate1, year1);
@@ -28,7 +28,7 @@ class WrappersTest {
     }
 
     @Test
-    public void createWrapperWithLiteralsAndParse() {
+    void createWrapperWithLiteralsAndParse() {
         Byte day1 = new Byte("17");
         Float temperature1 = new Float("-14.2");
         logger.info("Fabruary {} temperature {} Celsius", day1, temperature1);
@@ -40,71 +40,79 @@ class WrappersTest {
     }
 
     @Test
-    public void convertToBinary() {
+    void convertToBinary() {
         Integer a = 25;
         String binary = "11001";
         String actuale = Integer.toBinaryString(a);
-        assertTrue(binary.equals(actuale));
+        assertEquals(binary, actuale);
         logger.info("The number {} in the binary system is {}", a, actuale);
     }
 
     @Test
-    public void convertToOctal() {
+    void convertToOctal() {
         Integer a = 89;
         String octal = "131";
         String actuale = Integer.toOctalString(a);
-        assertTrue(octal.equals(actuale));
+        assertEquals(octal, actuale);
         logger.info("The number {} in the octal system is {}", a, actuale);
     }
 
     @Test
-    public void convertToHexademical() {
+    void convertToHexademical() {
         Integer a = 1569;
         String hex = "621";
         String actuale = Integer.toHexString(a);
-        assertTrue(hex.equals(actuale));
+        assertEquals(hex, actuale);
         logger.info("The number {} in the hexademical system is {}", a, actuale);
     }
 
     @Test
-    public void convertToString() {
+    void convertToString() {
         Double a = 258.78;
         String str = "258.78";
         String actuale = Double.toString(a);
-        assertTrue(str.equals(actuale));
+        assertEquals(str, actuale);
         logger.info("The number {} has been converted to String", a);
     }
 
     @Test
-    public void compareInCache() {
+    void compareInCache() {
         Byte x = 127;
         Byte y = 127;
-        Integer z = 127;
         assertEquals(x, y);
         assertSame(x, y);
-        assertNotEquals(x, z);
         logger.info("Numbers within the cache have the equal values and references");
     }
 
     @Test
-    public void compareOutOfCache() {
+    void compareOutOfCache() {
         Integer a = 250;
         Integer b = 250;
-        Long c = 250L;
         assertEquals(a, b);
         assertNotSame(a, b);
-        assertNotEquals(a, c);
         logger.info("Numbers out of the cache have the equal values but different references");
     }
 
     @Test
-    public void testThatWrappersAreConstants() {
-
-
-
+    void testThatWrappersAreConstants() {
+        Integer x = 1987;
+        Integer y = new Integer(x);
+        logger.info("x = {}, y = {}", x, y);
+        x = Wrappers.addition(x, 33);
+        Integer expected = 2020;
+        assertEquals(expected, x);
+        assertNotEquals(expected, y);
+        logger.info("x = {}, y = {}", x, y);
     }
 
-
-//todo выполнить пп 5
+    @Test
+    void addition() {
+        Integer a = 5;
+        int b = 7;
+        Integer expected = 12;
+        Integer actuale = Wrappers.addition(a, b);
+        assertEquals(expected, actuale);
+        logger.info("{} + {} = {}", a, b, actuale);
+    }
 
 }

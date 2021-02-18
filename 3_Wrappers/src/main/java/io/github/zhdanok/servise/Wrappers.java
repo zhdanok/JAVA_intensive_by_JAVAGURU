@@ -1,9 +1,16 @@
 package io.github.zhdanok.servise;
 
-import io.github.zhdanok.ApplicationWrappers;
-import org.apache.log4j.Logger;
+public class Wrappers {
 
-public class Wrappers {}
+    private Wrappers() {
+
+    }
+
+   public static Integer addition(Integer x, int i) {
+
+        return x + i;
+    }
+}
 
 
 
