@@ -9,6 +9,7 @@ public class Palindrome {
     public static Boolean isPalindrome(String str) {
         str = str.replaceAll("\\p{Punct}", "");
         str = str.replaceAll(" ", "");
+        str = str.toLowerCase();
         char[] strToChar1 = str.toCharArray();
         char[] strToChar2 = strToChar1.clone();
         int size = strToChar1.length;
@@ -18,7 +19,7 @@ public class Palindrome {
             strToChar1[i] = strToChar1[size - 1 - i];
             strToChar1[size - 1 - i] = buf;
         }
-        System.out.println(strToChar1);
+
         if (Arrays.equals(strToChar1, strToChar2)) {
             return true;
         }

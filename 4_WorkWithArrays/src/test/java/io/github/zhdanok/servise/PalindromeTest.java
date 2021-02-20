@@ -13,8 +13,7 @@ class PalindromeTest {
 
     @Test
     void isPalindrome_positive() {
-        String str = "le$v el";
-        logger.info(str);
+        String str = "le$v El";
         Boolean actualeResult = Palindrome.isPalindrome(str);
         Boolean expectedResult = true;
         assertEquals(expectedResult, actualeResult);
@@ -23,12 +22,12 @@ class PalindromeTest {
 
     @Test
     void isPalindrome_negative() {
-        String str = "le$v elm";
-        logger.info(str);
+        String str = "le$v elM";
         Boolean actualeResult = Palindrome.isPalindrome(str);
         Boolean expectedResult = true;
         assertNotEquals(expectedResult, actualeResult);
         logger.info("{} is not palindrome", str);
+
     }
 
 
