@@ -14,8 +14,8 @@ class BatterflyTest {
         int l = 7;
         int s = 7;
         int[][] emptyArray = Batterfly.generateArray(l, s);
-        assertEquals(emptyArray.length, 7);
-        assertEquals(emptyArray[0].length, 7);
+        assertEquals(7, emptyArray.length);
+        assertEquals(7, emptyArray[0].length );
     }
 
     @Test
