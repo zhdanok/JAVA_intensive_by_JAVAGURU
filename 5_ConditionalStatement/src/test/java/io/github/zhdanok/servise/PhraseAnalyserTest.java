@@ -45,5 +45,4 @@ class PhraseAnalyserTest {
         assertEquals(expected, actuale);
         logger.info("{} - {}", str, actuale);
     }
-
 }
