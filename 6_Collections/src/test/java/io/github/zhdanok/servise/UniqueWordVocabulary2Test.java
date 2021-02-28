@@ -9,68 +9,68 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UniqueWordVocabularyTest {
+class UniqueWordVocabulary2Test {
 
-    Logger logger = LoggerFactory.getLogger(UniqueWordVocabularyTest.class);
+    Logger logger = LoggerFactory.getLogger(UniqueWordVocabulary2Test.class);
+
+    UniqueWordVocabulary2 unique = new UniqueWordVocabulary2();
 
     @Test
     void addWord() {
         for (String s : Arrays.asList("Mama", "Papa", "Misha", "Vanya")) {
-            UniqueWordVocabulary.addWord(s);
+            unique.addWord(s);
         }
-        Set<String> act = Set.copyOf(UniqueWordVocabulary.voc);
-        logger.info("{}", act );
+        Set<String> act = Set.copyOf(unique.voc);
+        logger.info("{}", act);
         Set<String> exp = Set.of("Mama", "Papa", "Misha", "Vanya");
-        logger.info("{}", exp );
+        logger.info("{}", exp);
         assertIterableEquals(exp, act);
     }
 
     @Test
     void doNotAddDuplicate() {
         for (String s : Arrays.asList("Mama", "Papa", "Misha", "Vanya", "Papa", "Misha", "Vanya")) {
-            UniqueWordVocabulary.addWord(s);
+            unique.addWord(s);
         }
-        Set<String> act = Set.copyOf(UniqueWordVocabulary.voc);
-        logger.info("{}", act );
+        Set<String> act = Set.copyOf(unique.voc);
+        logger.info("{}", act);
         Set<String> exp = Set.of("Mama", "Papa", "Misha", "Vanya");
         assertIterableEquals(exp, act);
-        logger.info("{}", exp );
+        logger.info("{}", exp);
     }
 
     @Test
     void doNotAddEmpty() {
         for (String s : Arrays.asList("Mama", "Papa", " ", "Vanya")) {
-            UniqueWordVocabulary.addWord(s);
+            unique.addWord(s);
         }
-        Set<String> act = Set.copyOf(UniqueWordVocabulary.voc);
-        logger.info("{}", act );
+        Set<String> act = Set.copyOf(unique.voc);
+        logger.info("{}", act);
         Set<String> exp = Set.of("Mama", "Papa", "Vanya");
         assertTrue(act.equals(exp));
-        logger.info("{}", exp );
+        logger.info("{}", exp);
     }
 
     @Test
     void uniqueWordsCount() {
         for (String s : Arrays.asList("Mama", "Papa", "Misha", "Vanya", "Papa", "Misha", "Vanya")) {
-            UniqueWordVocabulary.addWord(s);
+            unique.addWord(s);
         }
-        int act = UniqueWordVocabulary.getWordsCount(UniqueWordVocabulary.voc);
+        int act = unique.getWordsCount(unique.voc);
         int exp = 4;
         assertEquals(exp, act);
-        logger.info("HashSet's {} size is {}", UniqueWordVocabulary.voc, act);
+        logger.info("HashSet's {} size is {}", unique.voc, act);
     }
 
     @Test
     void printVoc() {
         for (String s : Arrays.asList("Mama", "Papa", "Misha", "Vanya")) {
-            UniqueWordVocabulary.addWord(s);
+            unique.addWord(s);
         }
-        UniqueWordVocabulary.printVocabulary(UniqueWordVocabulary.voc);
-        
+        unique.printVocabulary(unique.voc);
+
     }
 }
-
-
 
 
 

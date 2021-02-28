@@ -5,28 +5,26 @@ import org.slf4j.LoggerFactory;
 import java.util.HashSet;
 import java.util.Set;
 
-public class UniqueWordVocabulary {
+public class UniqueWordVocabulary2 {
 
-    static Logger logger = LoggerFactory.getLogger(UniqueWordVocabulary.class);
+    Logger logger = LoggerFactory.getLogger(UniqueWordVocabulary2.class);
 
-    static Set<String> voc = new HashSet<>();
+    Set<String> voc = new HashSet<>();
 
-    public static void addWord(String word) {
+    public void addWord(String word) {
         if (!(voc.contains(word)) && !(word.equals(" "))) {
             voc.add(word);
         }
     }
 
-    public static int getWordsCount(Set<String> voc) {
+    public int getWordsCount(Set<String> voc) {
         return voc.size();
     }
 
-    public static void printVocabulary(Set<String> voc) {
+    public void printVocabulary(Set<String> voc) {
         for (String s : voc) {
             logger.info("{}", s);
         }
     }
 }
-
-
 
