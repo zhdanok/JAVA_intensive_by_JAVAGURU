@@ -2,8 +2,8 @@ package io.github.zhdanok.servise;
 
 public class Batterfly {
 
-    public static int[][] generateArray(int l, int s) {
-        return new int[l][s];
+    public static int[][] generateArray(int l) {
+        return new int[l][l];
     }
 
     public static int[][] paintBatterfly(int[][] batterfly) {

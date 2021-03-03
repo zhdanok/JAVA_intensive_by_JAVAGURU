@@ -43,23 +43,19 @@ public class MathOperationDemoTest {
 
     @Test
     public void division() {
-        double x = 24;
-        double y = 3;
-        double expected = 8;
-        double actuale = MathOperationDemo.division(x, y);
-        assertEquals(expected, actuale, 0.01);
+        int x = 24;
+        int y = 3;
+        int expected = 8;
+        int actuale = MathOperationDemo.division(x, y);
+        assertEquals(expected, actuale);
         logger.info("Division: x / y = {} / {} = {}", x, y, actuale);
 
     }
 
-    @Test
+    @Test(expected = ArithmeticException.class)
     public void divisionByZero() {
-        double x = 27.3;
-        double y = 0;
-        double actuale = MathOperationDemo.division(x, y);
-        assertEquals(0, actuale, 0.01);
-        logger.warn("Division by zero {} / {} is impossible", x, y);
-
+        int x = 24;
+        int actuale = MathOperationDemo.division(x, 0);
     }
 
 
