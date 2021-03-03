@@ -60,7 +60,7 @@ public class RandomGeneratorDemoTest {
         int a = -100;
         int b = 100;
         double[] expectedArray = RandomGeneratorDemo.generateArray(a, b);
-        double expected = 0;
+        double expected = 0.;
         for (double num : expectedArray) {
             expected = expected + num;
         }

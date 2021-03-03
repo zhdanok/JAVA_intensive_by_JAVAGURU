@@ -12,8 +12,7 @@ class BatterflyTest {
     @Test
     void generateArray() {
         int l = 7;
-        int s = 7;
-        int[][] emptyArray = Batterfly.generateArray(l, s);
+        int[][] emptyArray = Batterfly.generateArray(l);
         assertEquals(7, emptyArray.length);
         assertEquals(7, emptyArray[0].length );
     }
@@ -21,8 +20,7 @@ class BatterflyTest {
     @Test
     void paintBatterflyOdd() {
         int l = 7;
-        int s = 7;
-        int[][] emptyArray = Batterfly.generateArray(l, s);
+        int[][] emptyArray = Batterfly.generateArray(l);
         int[][] actuale = Batterfly.paintBatterfly(emptyArray);
         for (int i = 0; i < actuale.length; i++) {
             for (int j = 0; j < actuale[i].length; j++) {
@@ -35,8 +33,7 @@ class BatterflyTest {
     @Test
     void paintBatterflyEven() {
         int l = 8;
-        int s = 8;
-        int[][] emptyArray = Batterfly.generateArray(l, s);
+        int[][] emptyArray = Batterfly.generateArray(l);
         int[][] actuale = Batterfly.paintBatterfly(emptyArray);
         for (int i = 0; i < actuale.length; i++) {
             for (int j = 0; j < actuale[i].length; j++) {

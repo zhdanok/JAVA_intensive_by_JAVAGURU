@@ -14,11 +14,8 @@ public class MathOperationDemo {
         return x - y;
     }
 
-    public static double division(double x, double y) {
-        if (y == 0) {
-            return 0;
-        }
-        return x / y;
+    public static int division(int x, int y) {
+        return  x / y;
     }
 
     public static double reminder(double x, double y) {
