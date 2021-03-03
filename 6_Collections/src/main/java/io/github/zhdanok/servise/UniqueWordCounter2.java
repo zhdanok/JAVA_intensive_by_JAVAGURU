@@ -6,14 +6,14 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class UniqueWordCounter {
+public class UniqueWordCounter2 {
 
-    static Logger logger = LoggerFactory.getLogger(UniqueWordCounter.class);
+    Logger logger = LoggerFactory.getLogger(UniqueWordCounter2.class);
 
 
-    static Map<String, Integer> directory = new HashMap<>();
+    Map<String, Integer> directory = new HashMap<>();
 
-    public static void addWord(String s) {
+    public void addWord(String s) {
         if (directory.containsKey(s)) {
             Integer i = directory.get(s) + 1;
             directory.put(s, i);
@@ -22,7 +22,7 @@ public class UniqueWordCounter {
         }
     }
 
-    public static String getMostFrequentWord() {
+    public String getMostFrequentWord() {
         Integer maxValue = 0;
         String maxKey = "HashMap is empty";
         for (Map.Entry<String, Integer> entry : directory.entrySet()) {
@@ -36,7 +36,7 @@ public class UniqueWordCounter {
         return maxKey;
     }
 
-    public static void printWordsFrequency() {
+    public void printWordsFrequency() {
         for (Map.Entry<String, Integer> entry : directory.entrySet()) {
             logger.info("{} = {}", entry.getKey(), entry.getValue());
         }
