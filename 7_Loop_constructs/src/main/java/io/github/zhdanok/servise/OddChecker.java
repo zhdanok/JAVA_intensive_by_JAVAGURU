@@ -8,6 +8,8 @@ import java.util.List;
 
 public class OddChecker {
 
+
+
     Logger log = LoggerFactory.getLogger(OddChecker.class);
 
     public List<Integer> forOddChecker() {
@@ -21,6 +23,7 @@ public class OddChecker {
         return oddList;
     }
 
+
     public List<Integer> whileOddChecker() {
         List<Integer> oddList = new ArrayList<>();
         int i = 0;
@@ -33,6 +36,7 @@ public class OddChecker {
         log.info("{} - Loop While", oddList);
         return oddList;
     }
+
 
     public List<Integer> dowhileOddChecker() {
         List<Integer> oddList = new ArrayList<>();
