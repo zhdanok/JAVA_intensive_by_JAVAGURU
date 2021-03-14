@@ -2,6 +2,8 @@ package io.github.zhdanok.servise;
 
 public class CopyArray {
 
+
+
     public static int[] copyInRange(int[] example, int a, int b) {
         int size = 0;
         for (int x : example) {
