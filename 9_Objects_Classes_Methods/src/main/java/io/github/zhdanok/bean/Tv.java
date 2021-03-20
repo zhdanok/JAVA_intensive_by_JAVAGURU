@@ -12,6 +12,12 @@ public class Tv {
     public Tv() {
     }
 
+    public Tv(int currentChannel, int currentVolume, boolean switchedOn) {
+        this.currentChannel = currentChannel;
+        this.currentVolume = currentVolume;
+        this.switchedOn = switchedOn;
+    }
+
     public int getCurrentChannel() {
         return currentChannel;
     }
