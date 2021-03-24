@@ -10,5 +10,5 @@ public interface Consoleble {
 
     String readFromConsole() throws IOException;
 
-    void printToConsole(String answer);
+    void printToConsole(String task, String result);
 }

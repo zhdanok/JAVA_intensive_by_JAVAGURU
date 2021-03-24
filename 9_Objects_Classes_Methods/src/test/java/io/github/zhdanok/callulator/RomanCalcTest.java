@@ -40,6 +40,50 @@ class RomanCalcTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    void additionTest() throws Exception {
+        String actual = romanCalc.selectionOfOperation("1", "+", "1");
+        String expected = "II";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void subtractionTest() throws Exception {
+        String actual = romanCalc.selectionOfOperation("8", "-", "7");
+        String expected = "I";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void multiplicationTest() throws Exception {
+        String actual = romanCalc.selectionOfOperation("2", "*", "3");
+        String expected = "VI";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void divisionTest() throws Exception {
+        String actual = romanCalc.selectionOfOperation("8", "/", "2");
+        String expected = "IV";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void divisionTestResultNotInteger() {
+        Throwable e = assertThrows(Exception.class, () -> {
+            String actual = romanCalc.selectionOfOperation("9", "/", "2");
+        });
+        assertEquals("Result is not integer number. Please change parameters", e.getMessage());
+
+    }
+
+    @Test
+    void anotherOperationTest() throws Exception {
+        String actual = romanCalc.selectionOfOperation("8", "%", "2");
+        String expected = "Данная операция недоступна";
+        assertEquals(expected, actual);
+    }
+
 
 
 

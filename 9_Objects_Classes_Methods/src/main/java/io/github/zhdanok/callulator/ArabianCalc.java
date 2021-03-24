@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class ArabianCalc implements Transformable, Consoleble {
+public class ArabianCalc implements Transformable, Consoleble, Calculable {
 
     public ArabianCalc() {
     }
@@ -26,11 +26,12 @@ public class ArabianCalc implements Transformable, Consoleble {
     }
 
     @Override
-    public void printToConsole(String answer) {
-        logger.info("{}", answer);
+    public void printToConsole(String task, String result) {
+
+        logger.info("{} = {}", task, result);
     }
 
-    @Override//сделать дефолтным
+    /*@Override//сделать дефолтным
     public int extractIndexOfSymbol(char[] strToChar) {
         int index = 0;
         for (int i = 0; i < strToChar.length; i++) {
@@ -41,7 +42,7 @@ public class ArabianCalc implements Transformable, Consoleble {
             }
         }
         return index;
-    }
+    }*/
 
     @Override
     public String extractSymbol(char[] strToChar) {
@@ -71,10 +72,30 @@ public class ArabianCalc implements Transformable, Consoleble {
     }
 
 
+    @Override
+    public String addition(String leftNumber, String rightNumber) {
+        int result = Integer.valueOf(leftNumber) + Integer.valueOf(rightNumber);
+        return String.valueOf(result);
+    }
 
+    @Override
+    public String subtraction(String leftNumber, String rightNumber) {
+        int result = Integer.valueOf(leftNumber) - Integer.valueOf(rightNumber);
+        return String.valueOf(result);
+    }
 
+    @Override
+    public String multiplication(String leftNumber, String rightNumber) {
+        int result = Integer.valueOf(leftNumber) * Integer.valueOf(rightNumber);
+        return String.valueOf(result);
+    }
 
-
-
-
+    @Override
+    public String division(String leftNumber, String rightNumber) throws Exception {
+        int result = Integer.valueOf(leftNumber) % Integer.valueOf(rightNumber);
+        if (result == 0) {
+            result = Integer.valueOf(leftNumber) / Integer.valueOf(rightNumber);
+        } else throw new Exception("Result is not integer number. Please change parameters");
+        return String.valueOf(result);
+    }
 }
