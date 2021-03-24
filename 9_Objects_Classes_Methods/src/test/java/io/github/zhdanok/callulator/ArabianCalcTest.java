@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ArabianCalcTest {
 
-    ArabianCalc arabianCalc;
+    /*ArabianCalc arabianCalc;
 
     @BeforeEach
     void setUp() {
@@ -80,4 +80,5 @@ class ArabianCalcTest {
         String expected = "Данная операция недоступна";
         assertEquals(expected, actual);
     }
+}*/
 }

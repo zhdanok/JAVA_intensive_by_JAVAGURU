@@ -1,6 +1,10 @@
-package io.github.zhdanok.callulator;
+package io.github.zhdanok.calcfactory;
 
 public interface Calculable {
+
+    char[] SYMBOLS = {'*', '/', '+', '-'};
+    String[] ARABIC_NUMERALS = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+    String[] ROMAN_NUMERALS = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
 
     String addition(String leftNumber, String rightNumber);
 

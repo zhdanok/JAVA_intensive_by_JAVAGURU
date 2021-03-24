@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RomanCalcTest {
 
-    RomanCalc romanCalc;
+    /*RomanCalc romanCalc;
 
     @BeforeEach
     void setUp() {
@@ -84,7 +84,7 @@ class RomanCalcTest {
         assertEquals(expected, actual);
     }
 
-
+*/
 
 
 }
