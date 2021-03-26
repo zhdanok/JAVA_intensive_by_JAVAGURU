@@ -1,4 +1,4 @@
-package io.github.zhdanok.calcfactory;
+package io.github.zhdanok.calcfactory.calculators;
 
 
 public class ArabianCalc implements Calculable {

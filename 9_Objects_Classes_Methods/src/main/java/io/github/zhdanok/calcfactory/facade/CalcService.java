@@ -1,13 +1,18 @@
-package io.github.zhdanok.calcfactory;
+package io.github.zhdanok.calcfactory.facade;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import static io.github.zhdanok.calcfactory.Calculable.*;
-import static io.github.zhdanok.calcfactory.Demo.logger;
+import static io.github.zhdanok.calcfactory.calculators.Calculable.*;
+
 
 public class CalcService {
+
+    Logger logger = LoggerFactory.getLogger(CalcService.class);
 
     public String readFromConsole() throws IOException {
         logger.info("Введите выражение арабскими или римскими цифрами в формате a + b");

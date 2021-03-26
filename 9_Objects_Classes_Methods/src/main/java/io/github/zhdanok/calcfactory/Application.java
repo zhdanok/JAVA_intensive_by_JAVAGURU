@@ -1,5 +1,8 @@
 package io.github.zhdanok.calcfactory;
 
+import io.github.zhdanok.calcfactory.calculators.Calculable;
+import io.github.zhdanok.calcfactory.factories.AbstractCalcFactory;
+
 public class Application {
 
     private Calculable calculator;

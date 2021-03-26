@@ -1,13 +1,14 @@
 package io.github.zhdanok.calcfactory;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import io.github.zhdanok.calcfactory.facade.FacadeCalc;
+import io.github.zhdanok.calcfactory.factories.AbstractCalcFactory;
+import io.github.zhdanok.calcfactory.factories.ArabianCalcFactory;
+import io.github.zhdanok.calcfactory.factories.RomanCalcFactory;
+
 
 public class Demo {
 
-    static Logger logger = LoggerFactory.getLogger(Demo.class);
-
-    public static Application configureApplication(String resultOfSelection) throws Exception {
+    public static Application configureApplication(String resultOfSelection) {
         Application app;
         AbstractCalcFactory factory;
 
@@ -28,7 +29,4 @@ public class Demo {
         facadeCalc.startCalc();
 
     }
-
-
-
 }

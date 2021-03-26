@@ -1,4 +1,6 @@
-package io.github.zhdanok.calcfactory;
+package io.github.zhdanok.calcfactory.facade;
+
+import io.github.zhdanok.calcfactory.Application;
 
 import static io.github.zhdanok.calcfactory.Demo.configureApplication;
 

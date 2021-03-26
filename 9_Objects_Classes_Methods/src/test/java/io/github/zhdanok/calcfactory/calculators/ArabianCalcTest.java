@@ -1,16 +1,13 @@
-package io.github.zhdanok.callulator;
+package io.github.zhdanok.calcfactory.calculators;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-
-import java.io.IOException;
+import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ArabianCalcTest {
 
-    /*ArabianCalc arabianCalc;
+    ArabianCalc arabianCalc;
 
     @BeforeEach
     void setUp() {
@@ -18,48 +15,28 @@ class ArabianCalcTest {
     }
 
     @Test
-    void transformToCharArray() {
-        char[] actual = arabianCalc.transformToCharArray("15+ 2");
-        char[] expected = {'1', '5', '+', '2'};
-        assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    void splitIntoComponentsTest() {
-        char[] components = {'1', '5', '7', '+', '2'};
-        String[] actual = new String[3];
-
-        actual[0] = arabianCalc.extractLeftNumber(components);
-        actual[1] = arabianCalc.extractSymbol(components);
-        actual[2] = arabianCalc.extractRightNumber(components);
-        String[] expected = {"157", "+", "2"};
-        assertArrayEquals(expected, actual);
-    }
-
-
-    @Test
-    void additionTest() throws Exception {
+    void addition() throws Exception {
         String actual = arabianCalc.selectionOfOperation("7", "+", "8");
         String expected = "15";
         assertEquals(expected, actual);
     }
 
     @Test
-    void subtractionTest() throws Exception {
+    void subtraction() throws Exception {
         String actual = arabianCalc.selectionOfOperation("7", "-", "8");
         String expected = "-1";
         assertEquals(expected, actual);
     }
 
     @Test
-    void multiplicationTest() throws Exception {
+    void multiplication() throws Exception {
         String actual = arabianCalc.selectionOfOperation("7", "*", "8");
         String expected = "56";
         assertEquals(expected, actual);
     }
 
     @Test
-    void divisionTest() throws Exception {
+    void division() throws Exception {
         String actual = arabianCalc.selectionOfOperation("8", "/", "2");
         String expected = "4";
         assertEquals(expected, actual);
@@ -80,5 +57,4 @@ class ArabianCalcTest {
         String expected = "Данная операция недоступна";
         assertEquals(expected, actual);
     }
-}*/
 }
