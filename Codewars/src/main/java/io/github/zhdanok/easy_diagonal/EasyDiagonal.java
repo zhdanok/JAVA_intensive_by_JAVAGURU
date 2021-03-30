@@ -2,30 +2,30 @@ package io.github.zhdanok.easy_diagonal;
 
 public class EasyDiagonal {
 
-    private int a;
-    private int b;
+    private int n;
+    private int p;
 
     public EasyDiagonal() {
     }
 
-    public EasyDiagonal(int a, int b) {
-        this.a = a;
-        this.b = b;
+    public EasyDiagonal(int n, int p) {
+        this.n = n;
+        this.p = p;
     }
 
-    public int getA() {
-        return a;
+    public int getN() {
+        return n;
     }
 
-    public void setA(int a) {
-        this.a = a;
+    public void setN(int n) {
+        this.n = n;
     }
 
-    public int getB() {
-        return b;
+    public int getP() {
+        return p;
     }
 
-    public void setB(int b) {
-        this.b = b;
+    public void setP(int p) {
+        this.p = p;
     }
 }
