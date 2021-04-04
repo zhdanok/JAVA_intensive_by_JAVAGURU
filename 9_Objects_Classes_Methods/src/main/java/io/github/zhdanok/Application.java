@@ -2,8 +2,10 @@ package io.github.zhdanok;
 
 public class Application {
 
-    public static void main(String[] args) {
 
-        //Точка входа в приложение
+    public static void main(String[] args)  {
+
+
+
     }
 }
