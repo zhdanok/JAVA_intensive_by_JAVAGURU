@@ -5,10 +5,8 @@ public class Application {
     public static void main(String[] args) {
 
         Labyrinth labyrinth = new Labyrinth();
+        labyrinth.startTheGame();
 
-        labyrinth.printTheGamePlace();
-        labyrinth.chooseMove();
-        labyrinth.printTheGamePlace();
 
     }
 
